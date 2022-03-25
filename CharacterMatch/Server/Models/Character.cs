@@ -13,6 +13,8 @@ namespace CharacterMatch.Server.Models
 
         public string Description { get; set; }
 
+        public string ImgUrl { get; set; }
+
         [ForeignKey(nameof(Series))]
         public int SeriesId { get; set; }
         public virtual Series Series { get; set; }
