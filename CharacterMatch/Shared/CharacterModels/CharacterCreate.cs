@@ -16,6 +16,6 @@ namespace CharacterMatch.Shared.CharacterModels
         public string ImgUrl { get; set; }
 
         //Collection of Character traits to give them traits on create.
-        //public ICollection<AddTraitToCharacter> TraitsToAdd { get; set; } = new List<AddTraitToCharacter>();
+        public ICollection<AddTraitToCharacter> TraitsToAdd { get; set; } = new List<AddTraitToCharacter>();
     }
 }

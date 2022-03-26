@@ -9,6 +9,6 @@ namespace CharacterMatch.Shared.CharacterTraitModels
     public class AddTraitToCharacter
     {
         public int TraitId { get; set; }
-        public byte Rating { get; set; }
+        public byte Value { get; set; }
     }
 }

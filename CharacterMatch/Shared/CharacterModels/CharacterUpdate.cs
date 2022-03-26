@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterMatch.Shared.CharacterTraitModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,7 @@ namespace CharacterMatch.Shared.CharacterModels
         public int SeriesId { get; set; }
 
         //maybe include updating the trait values
+        public ICollection<AddTraitToCharacter> Traits { get; set; } = new List<AddTraitToCharacter>();
+
     }
 }
