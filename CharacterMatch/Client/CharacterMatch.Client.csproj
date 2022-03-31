@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Shared\CharacterMatch.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\CharacterPages\" />
+    <Folder Include="Pages\TraitPages\" />
+    <Folder Include="Pages\SeriesPages\" />
+  </ItemGroup>
+
 </Project>

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CharacterMatch.Shared.CharacterModels
 {
-    public class CharacterUpdateTraits
+    public class CharacterWithTraits
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int SeriesId { get; set; }
         public ICollection<CharacterTraitModels.AddTraitToCharacter> Traits { get; set; }   = new List<CharacterTraitModels.AddTraitToCharacter>(); 
 
     }

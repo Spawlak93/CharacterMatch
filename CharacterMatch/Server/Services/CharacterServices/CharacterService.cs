@@ -42,7 +42,12 @@ namespace CharacterMatch.Server.Services.CharacterServices
 
         public async Task<IEnumerable<CharacterListItem>> GetAllCharactersAsync()
         {
-            return await _ctx.Characters.Select(c => new CharacterListItem { Id = c.Id, Name = c.Name, }).ToListAsync();
+            return await _ctx.Characters.Select(c => new CharacterListItem { Id = c.Id, Name = c.Name, SeriesId = c.SeriesId}).ToListAsync();
+        }
+
+        public async Task<IEnumerable<CharacterWithTraits>> GetAllCharactersWithTraitsAsync()
+        {
+            return await _ctx.Characters.Include(c => c.Traits).Select(c => new CharacterWithTraits { Id = c.Id, Name = c.Name, SeriesId = c.SeriesId, Traits = c.Traits.Select(t => new Shared.CharacterTraitModels.AddTraitToCharacter { TraitId = t.TraitId, Value = t.Value }).ToList() }).ToListAsync();
         }
 
         public async Task<CharacterDetail> GetCharacterByIdAsync(int characterId)
